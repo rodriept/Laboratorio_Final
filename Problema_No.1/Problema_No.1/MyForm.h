@@ -136,11 +136,19 @@ namespace ProblemaNo1 {
 				}
 				for (int i = 0; i < Arreglo->Length; i++)
 				{
+					int j = 0;
 					Key = Arreglo[i] % Arreglo->Length;
+					while (Hashing->Contains(Key))
+					{
+						j++;
+						Key++;
+						Key %= Arreglo->Length;
+					}
 					Hashing->Add(Key, Arreglo[i]);
+			
 				}
 				MessageBox::Show("El arreglo ya fue llenado con números aleatorios", "Arreglo lleno", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-
+				
 			}
 		}
 		catch (...)
