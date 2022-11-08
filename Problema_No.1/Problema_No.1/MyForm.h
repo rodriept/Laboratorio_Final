@@ -116,6 +116,7 @@ namespace ProblemaNo1 {
 #pragma endregion
 		array<int>^ Arreglo;
 		int Key;
+		Hashtable^ Hashing = gcnew Hashtable;
 	private: System::Void BIngresarArreglo_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		try
@@ -133,6 +134,13 @@ namespace ProblemaNo1 {
 				{
 					Arreglo[i] = NumerosRandom->Next(0, 100);
 				}
+				for (int i = 0; i < Arreglo->Length; i++)
+				{
+					Key = Arreglo[i] % Arreglo->Length;
+					Hashing->Add(Key, Arreglo[i]);
+				}
+				MessageBox::Show("El arreglo ya fue llenado con números aleatorios", "Arreglo lleno", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+
 			}
 		}
 		catch (...)
