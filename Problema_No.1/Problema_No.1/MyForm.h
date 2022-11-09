@@ -225,34 +225,69 @@ namespace ProblemaNo1 {
 	private: System::Void Bbuscar_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		int opcion = CBElegirBusqueda->SelectedIndex;
-		int EncontrarNum, cont;
+		int EncontrarNum, cont = 0;
+		array<int>^ ArregloTemp = gcnew array<int>(Arreglo->Length);
 		if (opcion == 1 || opcion == 0)
 		{
 			switch (opcion)
 			{
 			case 0:
 				EncontrarNum = Convert::ToInt32(TBBuscarNumArreglo->Text);
-				cont = 0;
 				for (int i = 0; i < Arreglo->Length; i++)
 				{
-				   if (Arreglo[i] == EncontrarNum)
-				   {
-					 MessageBox::Show("El número se encuentra en la posición: " + i, "Número encontrado", MessageBoxButtons::OK);
-				   }
-				   else
-				   {
-					   cont++;
-				   }
-				   
-				}	
+					if (Arreglo[i] == EncontrarNum)
+					{
+					  MessageBox::Show("El Número" + EncontrarNum + " se encuentra en la posicón: " + i, "Número encontrado", MessageBoxButtons::OK);
+					}
+					else
+					{
+					  cont++;
+					}
+
+				}
 				if (cont == Arreglo->Length)
 				{
-					MessageBox::Show("No se encuentra el número en el arreglo", "Error:Número no encontrado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					MessageBox::Show("El Número" + EncontrarNum +" no se encuentra en el arreglo", "Error: Número no encontrado", MessageBoxButtons::OK, MessageBoxIcon::Error);
 				}
 				break;
 			case 1:
-				break;
-			default:
+				EncontrarNum = Convert::ToInt32(TBBuscarNumArreglo->Text);
+				int inf = 0, sup = ArregloTemp->Length, mitad;
+
+				for (int i = 0; i < Arreglo->Length; i++)
+				{
+					ArregloTemp[i] = Arreglo[i];
+				}
+				for (int i = 0; i < ArregloTemp->Length; i++) //Ordenar el arreglo Temporal
+				{
+					for (int j = i + 1; j < ArregloTemp->Length; j++)
+					{
+						if (ArregloTemp[i] > ArregloTemp[j])
+						{
+							int Temporal = ArregloTemp[i];
+							ArregloTemp[i] = ArregloTemp[j];
+							ArregloTemp[j] = Temporal;
+						}
+					}
+				}
+				while (inf <= sup)
+				{
+					mitad = (inf + sup) / 2;
+					if (ArregloTemp[mitad] == EncontrarNum)
+					{
+						MessageBox::Show("El número" + EncontrarNum + " se encuentra en la posición : " + mitad, "Número Encontrado", MessageBoxButtons::OK);
+					}
+					if(ArregloTemp[mitad] > EncontrarNum)
+					{
+						sup = mitad;
+						mitad = (inf + sup) / 2;
+					}
+					if (ArregloTemp[mitad]< EncontrarNum)
+					{
+						inf = mitad; 
+						mitad = (inf + sup) / 2;
+					}
+				}
 				break;
 			}
 		}
