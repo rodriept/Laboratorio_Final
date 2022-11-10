@@ -1,5 +1,8 @@
 #pragma once
-
+#include <stdlib.h>
+#include <fstream>
+#include <time.h>
+#include <stdio.h>
 namespace ProblemaNo1 {
 
 	using namespace System;
@@ -46,6 +49,10 @@ namespace ProblemaNo1 {
 
 	private: System::Windows::Forms::Button^ Bbuscar;
 	private: System::Windows::Forms::ComboBox^ CBElegirBusqueda;
+	private: System::Windows::Forms::ListBox^ LBMostrarNum;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ LTiempo;
+
 
 
 
@@ -74,6 +81,9 @@ namespace ProblemaNo1 {
 			this->TBBuscarNumArreglo = (gcnew System::Windows::Forms::TextBox());
 			this->Bbuscar = (gcnew System::Windows::Forms::Button());
 			this->CBElegirBusqueda = (gcnew System::Windows::Forms::ComboBox());
+			this->LBMostrarNum = (gcnew System::Windows::Forms::ListBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->LTiempo = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -82,7 +92,8 @@ namespace ProblemaNo1 {
 			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 14.25F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(3, 9);
+			this->label1->Location = System::Drawing::Point(4, 11);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(383, 25);
 			this->label1->TabIndex = 0;
@@ -93,7 +104,8 @@ namespace ProblemaNo1 {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(12, 59);
+			this->label2->Location = System::Drawing::Point(16, 73);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(171, 15);
 			this->label2->TabIndex = 1;
@@ -101,17 +113,19 @@ namespace ProblemaNo1 {
 			// 
 			// TBArregloTam
 			// 
-			this->TBArregloTam->Location = System::Drawing::Point(189, 58);
+			this->TBArregloTam->Location = System::Drawing::Point(252, 71);
+			this->TBArregloTam->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->TBArregloTam->Name = L"TBArregloTam";
-			this->TBArregloTam->Size = System::Drawing::Size(47, 20);
+			this->TBArregloTam->Size = System::Drawing::Size(61, 22);
 			this->TBArregloTam->TabIndex = 2;
 			// 
 			// BIngresarArreglo
 			// 
 			this->BIngresarArreglo->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->BIngresarArreglo->Location = System::Drawing::Point(242, 56);
+			this->BIngresarArreglo->Location = System::Drawing::Point(323, 69);
+			this->BIngresarArreglo->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->BIngresarArreglo->Name = L"BIngresarArreglo";
-			this->BIngresarArreglo->Size = System::Drawing::Size(75, 23);
+			this->BIngresarArreglo->Size = System::Drawing::Size(100, 28);
 			this->BIngresarArreglo->TabIndex = 3;
 			this->BIngresarArreglo->Text = L"Ingresar";
 			this->BIngresarArreglo->UseVisualStyleBackColor = true;
@@ -120,26 +134,29 @@ namespace ProblemaNo1 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(12, 116);
+			this->label3->Location = System::Drawing::Point(16, 143);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(144, 13);
+			this->label3->Size = System::Drawing::Size(179, 16);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Buscar un número generado:";
 			// 
 			// TBBuscarNumArreglo
 			// 
-			this->TBBuscarNumArreglo->Location = System::Drawing::Point(15, 177);
+			this->TBBuscarNumArreglo->Location = System::Drawing::Point(20, 218);
+			this->TBBuscarNumArreglo->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->TBBuscarNumArreglo->Name = L"TBBuscarNumArreglo";
-			this->TBBuscarNumArreglo->Size = System::Drawing::Size(47, 20);
+			this->TBBuscarNumArreglo->Size = System::Drawing::Size(61, 22);
 			this->TBBuscarNumArreglo->TabIndex = 5;
 			// 
 			// Bbuscar
 			// 
 			this->Bbuscar->Enabled = false;
 			this->Bbuscar->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->Bbuscar->Location = System::Drawing::Point(68, 174);
+			this->Bbuscar->Location = System::Drawing::Point(91, 214);
+			this->Bbuscar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Bbuscar->Name = L"Bbuscar";
-			this->Bbuscar->Size = System::Drawing::Size(88, 23);
+			this->Bbuscar->Size = System::Drawing::Size(117, 28);
 			this->Bbuscar->TabIndex = 6;
 			this->Bbuscar->Text = L"Buscar número";
 			this->Bbuscar->UseVisualStyleBackColor = true;
@@ -149,16 +166,47 @@ namespace ProblemaNo1 {
 			// 
 			this->CBElegirBusqueda->FormattingEnabled = true;
 			this->CBElegirBusqueda->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Secuencial", L"Binaria" });
-			this->CBElegirBusqueda->Location = System::Drawing::Point(15, 136);
+			this->CBElegirBusqueda->Location = System::Drawing::Point(20, 167);
+			this->CBElegirBusqueda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->CBElegirBusqueda->Name = L"CBElegirBusqueda";
-			this->CBElegirBusqueda->Size = System::Drawing::Size(121, 21);
+			this->CBElegirBusqueda->Size = System::Drawing::Size(160, 24);
 			this->CBElegirBusqueda->TabIndex = 7;
+			// 
+			// LBMostrarNum
+			// 
+			this->LBMostrarNum->FormattingEnabled = true;
+			this->LBMostrarNum->ItemHeight = 16;
+			this->LBMostrarNum->Location = System::Drawing::Point(252, 130);
+			this->LBMostrarNum->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->LBMostrarNum->Name = L"LBMostrarNum";
+			this->LBMostrarNum->Size = System::Drawing::Size(128, 180);
+			this->LBMostrarNum->TabIndex = 8;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(403, 130);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(57, 16);
+			this->label4->TabIndex = 9;
+			this->label4->Text = L"Tiempo:";
+			// 
+			// LTiempo
+			// 
+			this->LTiempo->AutoSize = true;
+			this->LTiempo->Location = System::Drawing::Point(466, 130);
+			this->LTiempo->Name = L"LTiempo";
+			this->LTiempo->Size = System::Drawing::Size(0, 16);
+			this->LTiempo->TabIndex = 10;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(398, 333);
+			this->ClientSize = System::Drawing::Size(577, 438);
+			this->Controls->Add(this->LTiempo);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->LBMostrarNum);
 			this->Controls->Add(this->CBElegirBusqueda);
 			this->Controls->Add(this->Bbuscar);
 			this->Controls->Add(this->TBBuscarNumArreglo);
@@ -167,6 +215,7 @@ namespace ProblemaNo1 {
 			this->Controls->Add(this->TBArregloTam);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm";
 			this->Text = L"Problema No.1";
 			this->ResumeLayout(false);
@@ -174,10 +223,12 @@ namespace ProblemaNo1 {
 
 		}
 #pragma endregion
+		//Variables globales
 		array<int>^ Arreglo;
 		int Key;
 		Hashtable^ Hashing = gcnew Hashtable;
-		Stopwatch^ TimerControler = gcnew Stopwatch();
+		Stopwatch^ TiempoRealizarArreglo = gcnew Stopwatch();
+		Stopwatch^ TiempoBusqueda = gcnew Stopwatch();
 	private: System::Void BIngresarArreglo_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		try
@@ -191,6 +242,8 @@ namespace ProblemaNo1 {
 			{
 				Arreglo = gcnew array<int>(Convert::ToInt32(TBArregloTam->Text));
 				Random^ NumerosRandom = gcnew Random();
+				TiempoRealizarArreglo->Start();
+				srand(time(NULL));
 				for (int i = 0; i < Arreglo->Length; i++)
 				{
 					Arreglo[i] = NumerosRandom->Next(0, 10);
@@ -209,9 +262,16 @@ namespace ProblemaNo1 {
 					Hashing->Add(Key, Arreglo[i]);
 			
 				}
-	
+				for (int i = 0; i < Arreglo->Length; i++)
+				{
+					LBMostrarNum->Items->Add(Arreglo[i]);
+				}
+				TiempoRealizarArreglo->Stop();
+				LTiempo->Text = Convert::ToString(TiempoRealizarArreglo->ElapsedMilliseconds) + " milisegundos";
 				MessageBox::Show("El arreglo ya fue llenado con números aleatorios", "Arreglo lleno", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 				Bbuscar->Enabled = true;
+				BIngresarArreglo->Enabled = false;
+				
 			}
 		}
 		catch (...)
@@ -233,11 +293,13 @@ namespace ProblemaNo1 {
 			{
 			case 0:
 				EncontrarNum = Convert::ToInt32(TBBuscarNumArreglo->Text);
+				TiempoBusqueda->Reset();
+				TiempoBusqueda->Start();
 				for (int i = 0; i < Arreglo->Length; i++)
 				{
 					if (Arreglo[i] == EncontrarNum)
 					{
-					  MessageBox::Show("El Número" + EncontrarNum + " se encuentra en la posicón: " + i, "Número encontrado", MessageBoxButtons::OK);
+					  MessageBox::Show("El Número " + EncontrarNum + " se encuentra en la posicón: " + i, "Número encontrado", MessageBoxButtons::OK);
 					}
 					else
 					{
@@ -247,8 +309,10 @@ namespace ProblemaNo1 {
 				}
 				if (cont == Arreglo->Length)
 				{
-					MessageBox::Show("El Número" + EncontrarNum +" no se encuentra en el arreglo", "Error: Número no encontrado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					MessageBox::Show("El Número " + EncontrarNum +" no se encuentra en el arreglo", "Error: Número no encontrado", MessageBoxButtons::OK, MessageBoxIcon::Error);
 				}
+				LTiempo->Text = Convert::ToString(TiempoBusqueda->ElapsedMilliseconds) + " milisegundos";
+				TiempoBusqueda->Stop();
 				break;
 			case 1:
 				EncontrarNum = Convert::ToInt32(TBBuscarNumArreglo->Text);
@@ -276,6 +340,7 @@ namespace ProblemaNo1 {
 					if (ArregloTemp[mitad] == EncontrarNum)
 					{
 						MessageBox::Show("El número" + EncontrarNum + " se encuentra en la posición : " + mitad, "Número Encontrado", MessageBoxButtons::OK);
+						break;
 					}
 					if(ArregloTemp[mitad] > EncontrarNum)
 					{
@@ -288,6 +353,7 @@ namespace ProblemaNo1 {
 						mitad = (inf + sup) / 2;
 					}
 				}
+			
 				break;
 			}
 		}
