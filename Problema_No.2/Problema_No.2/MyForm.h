@@ -5,6 +5,7 @@
 #include "Rectangulo.h"
 #include "Triangulo.h"
 #include "Cuadrado.h"
+#include "ListaPoligonos.h"
 
 namespace ProblemaNo2 {
 
@@ -28,6 +29,11 @@ namespace ProblemaNo2 {
 		int Perimetro;
 		int Area;
 		int Id;
+	public: 
+		//Listas para datos de tipo int
+		ListaPoligonos* GuardarId = new ListaPoligonos();
+		ListaPoligonos* GuardarAreas = new ListaPoligonos();
+		ListaPoligonos* GuardarPerimetro = new ListaPoligonos();
 	private: System::Windows::Forms::Button^ BMostrarFiguras;
 
 
@@ -142,7 +148,7 @@ namespace ProblemaNo2 {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(159, 11);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(139, 26);
+			this->label1->Size = System::Drawing::Size(179, 31);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Problema No.2";
 			// 
@@ -416,6 +422,7 @@ namespace ProblemaNo2 {
 			this->BMostrarFiguras->TabIndex = 26;
 			this->BMostrarFiguras->Text = L"Mostrar Figuras";
 			this->BMostrarFiguras->UseVisualStyleBackColor = true;
+			this->BMostrarFiguras->Click += gcnew System::EventHandler(this, &MyForm::BMostrarFiguras_Click);
 			// 
 			// MyForm
 			// 
@@ -541,6 +548,11 @@ namespace ProblemaNo2 {
 			Id++;
 			rectangulo.SetId(Id);
 			BMostrarFiguras->Enabled = true;
+
+			GuardarAreas->add(Area);
+			GuardarPerimetro->add(Perimetro);
+			GuardarId->add(rectangulo.GetId());
+
 		}
     }
     private: System::Void BTriangulo_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -565,6 +577,11 @@ namespace ProblemaNo2 {
 			Area = triangulo.area();
 			Id++;
 			triangulo.SetId(Id);
+
+			GuardarAreas->add(Area);
+			GuardarPerimetro->add(Perimetro);
+			GuardarId->add(triangulo.GetId());
+
 			BMostrarFiguras->Enabled = true;
 		}
 		
@@ -588,9 +605,21 @@ namespace ProblemaNo2 {
 			cuadrado.SetId(Id);
 			BMostrarFiguras->Enabled = true;
 
+			GuardarAreas->add(Area);
+			GuardarPerimetro->add(Perimetro);
+			GuardarId->add(cuadrado.GetId());
 		}
 		
 		
+    }
+    private: System::Void BMostrarFiguras_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+		while (!GuardarPerimetro->empty() && !GuardarAreas->empty() && !GuardarId->empty())
+		{
+			LBArea->Items->Add(GuardarAreas->pop());
+			LBPerimetro->Items->Add(GuardarPerimetro->pop());
+			LBParaID->Items->Add(GuardarId->pop());
+		}
     }
 };
 }
