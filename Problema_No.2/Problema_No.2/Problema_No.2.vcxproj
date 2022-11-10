@@ -131,6 +131,7 @@
     <ClCompile Include="ListaConString.cpp" />
     <ClCompile Include="ListaPoligonos.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="NodoPoligonos.cpp" />
     <ClCompile Include="Poligono.cpp" />
     <ClCompile Include="Rectangulo.cpp" />
     <ClCompile Include="Triangulo.cpp" />
@@ -142,6 +143,7 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="NodoPoligonos.h" />
     <ClInclude Include="Poligono.h" />
     <ClInclude Include="Rectangulo.h" />
     <ClInclude Include="Triangulo.h" />
