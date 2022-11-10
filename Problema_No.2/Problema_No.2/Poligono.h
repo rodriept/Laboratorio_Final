@@ -16,11 +16,11 @@ public:
 	int GetArista();
 	void SetArista(int Arista);
 	
-	double Getarista2();
-	void Setarista2(double arista2);
+	int Getarista2();
+	void Setarista2(int arista2);
 
-	double area();
-	double perimetro();
+	int area();
+	int perimetro();
 
 };
 
