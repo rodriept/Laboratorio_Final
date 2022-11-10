@@ -7,5 +7,10 @@ int Triangulo::ObtenerArea()
 
 int Triangulo::ObtenerPerimetro()
 {
-	return (2 * GetArista()) + Getarista2();
+	return (2 * Lado) + Getarista2();
+}
+
+void Triangulo::SetLado()
+{
+	Lado = sqrt((pow(GetArista(), 2) + pow(Getarista2(), 2)));
 }
