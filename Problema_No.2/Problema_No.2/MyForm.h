@@ -14,6 +14,8 @@ namespace ProblemaNo2 {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+		int Ancho;
+		int Largo;
 	public:
 		MyForm(void)
 		{
@@ -276,6 +278,7 @@ namespace ProblemaNo2 {
 			this->BRectangulo->Text = L"Ingresar Rectangulo";
 			this->BRectangulo->UseVisualStyleBackColor = true;
 			this->BRectangulo->Visible = false;
+			this->BRectangulo->Click += gcnew System::EventHandler(this, &MyForm::BRectangulo_Click);
 			// 
 			// LAltura
 			// 
@@ -392,6 +395,7 @@ namespace ProblemaNo2 {
 #pragma endregion
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
 	{
+		//Seleccion de figura para ingresar
 		switch (CBSeleccionarFigura->SelectedIndex)
 		{
 		case 0:
@@ -450,5 +454,21 @@ namespace ProblemaNo2 {
 		}
 	}
 
+    private: System::Void BRectangulo_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+		//Ingresar un rectangulo
+		String^ Color = "Azul";
+		String^ tipoFigura = "Rectangulo";
+		Ancho = Convert::ToInt32(TBAnchoRec->Text);
+		Largo = Convert::ToInt32(TBLargoRec->Text);
+		if (TBAnchoRec->Text == "" || TBLargoRec->Text == "")
+		{
+			MessageBox::Show("Debe ingresar los datos de la figura", "Error: datos no ingresados", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+		else if (TBAnchoRec->Text == TBLargoRec->Text)
+		{
+			MessageBox::Show("Está ingresando datos con las características de un cuadrado, ingrese dos valores distintos", "Error: ingreso de valores iguales", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+    }
 };
 }

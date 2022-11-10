@@ -127,16 +127,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cuadrado.cpp" />
     <ClCompile Include="ListaPoligonos.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Poligono.cpp" />
+    <ClCompile Include="Rectangulo.cpp" />
+    <ClCompile Include="Triangulo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cuadrado.h" />
     <ClInclude Include="ListaPoligonos.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Poligono.h" />
+    <ClInclude Include="Rectangulo.h" />
+    <ClInclude Include="Triangulo.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
