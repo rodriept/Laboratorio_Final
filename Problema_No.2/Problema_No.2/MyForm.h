@@ -6,6 +6,7 @@
 #include "Triangulo.h"
 #include "Cuadrado.h"
 #include "ListaPoligonos.h"
+#include "ListaConString.h"
 
 namespace ProblemaNo2 {
 
@@ -34,6 +35,9 @@ namespace ProblemaNo2 {
 		ListaPoligonos* GuardarId = new ListaPoligonos();
 		ListaPoligonos* GuardarAreas = new ListaPoligonos();
 		ListaPoligonos* GuardarPerimetro = new ListaPoligonos();
+		//Listas Para datos de tipo string
+		ListaConString* GuardarColor = new ListaConString();
+		ListaConString* GuardarFigura = new ListaConString();
 	private: System::Windows::Forms::Button^ BMostrarFiguras;
 
 
@@ -528,8 +532,8 @@ namespace ProblemaNo2 {
     private: System::Void BRectangulo_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 		//Ingresar un rectangulo
-		String^ Color = "Azul";
-		String^ tipoFigura = "Rectangulo";
+		string Color = "Azul";
+		string tipoFigura = "Rectangulo";
 		Ancho = Convert::ToInt32(TBAnchoRec->Text);
 		Largo = Convert::ToInt32(TBLargoRec->Text);
 		if (TBAnchoRec->Text == "" || TBLargoRec->Text == "")
@@ -547,19 +551,21 @@ namespace ProblemaNo2 {
 			Area = rectangulo.area();
 			Id++;
 			rectangulo.SetId(Id);
-			BMostrarFiguras->Enabled = true;
+			
 
 			GuardarAreas->add(Area);
 			GuardarPerimetro->add(Perimetro);
 			GuardarId->add(rectangulo.GetId());
-
+			GuardarColor->add(Color);
+			GuardarFigura->add(tipoFigura);
+			BMostrarFiguras->Enabled = true;
 		}
     }
     private: System::Void BTriangulo_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		//Ingresar un triangulo 
 		string Color = "Amarillo";
-		string tipo = "Triangulo";
+		string tipoFigura = "Triangulo";
 		
 		Altura = Convert::ToInt32(TBAlturaTria->Text);
 		Base = Convert::ToInt32(TBBaseTria->Text);
@@ -573,22 +579,23 @@ namespace ProblemaNo2 {
 			triangulo.SetArista(Altura);
 			triangulo.Setarista2(Base);
 			triangulo.SetLado();
-			Perimetro = triangulo.perimetro();
-			Area = triangulo.area();
+			Perimetro = triangulo.ObtenerPerimetro();
+			Area = triangulo.ObtenerArea();
 			Id++;
 			triangulo.SetId(Id);
 
 			GuardarAreas->add(Area);
 			GuardarPerimetro->add(Perimetro);
 			GuardarId->add(triangulo.GetId());
-
+			GuardarColor->add(Color);
+			GuardarFigura->add(tipoFigura);
 			BMostrarFiguras->Enabled = true;
 		}
 		
     }
     private: System::Void BCuadrado_Click(System::Object^ sender, System::EventArgs^ e) 
     {
-		string Tipo = "Cuadrado";
+		string TipoFigura = "Cuadrado";
 		string Color = "Rojo";
 
 		Lado = Convert::ToInt32(TBLadoCuadrado->Text);
@@ -603,11 +610,14 @@ namespace ProblemaNo2 {
 			Area = cuadrado.area();
 			Id++;
 			cuadrado.SetId(Id);
-			BMostrarFiguras->Enabled = true;
+			
 
 			GuardarAreas->add(Area);
 			GuardarPerimetro->add(Perimetro);
 			GuardarId->add(cuadrado.GetId());
+			GuardarColor->add(Color);
+			GuardarFigura->add(TipoFigura);
+			BMostrarFiguras->Enabled = true;
 		}
 		
 		
@@ -619,6 +629,21 @@ namespace ProblemaNo2 {
 			LBArea->Items->Add(GuardarAreas->pop());
 			LBPerimetro->Items->Add(GuardarPerimetro->pop());
 			LBParaID->Items->Add(GuardarId->pop());
+		}
+		string colores;
+		string Tipos;
+		String^ ImprimirColores;
+		String^ ImprimirTipos;
+		while (!GuardarColor->empty() && !GuardarFigura->empty())
+		{
+			colores = GuardarColor->pop();
+			Tipos = GuardarFigura->pop();
+
+			ImprimirColores = gcnew String(colores.c_str());
+			ImprimirTipos = gcnew String(Tipos.c_str());
+			LBColor->Items->Add(ImprimirColores);
+			LBTipo->Items->Add(ImprimirTipos);
+
 		}
     }
 };

@@ -32,18 +32,7 @@ int ListaPoligonos::add(int _Elemento)
 	index++;
 }
 
-//Imprimir la información de la lista
-int ListaPoligonos::print()
-{
-	int dato = 0;
-	NodoPoligonos * Temp = Primero;
-	while (Temp != nullptr)
-	{
-		dato = Temp->elemento;
-		Temp = Temp->Next;
-	}
-	return dato;
-}
+
 
 int ListaPoligonos::pop()
 {
