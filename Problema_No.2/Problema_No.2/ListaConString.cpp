@@ -9,19 +9,10 @@ ListaConString::ListaConString()
 	index = 0; 
 	Primero = nullptr;
 }
+//Verificar si la lista esta vacía o no
 bool ListaConString::empty() 
 {
 	return (this->Primero == nullptr);
-}
-string ListaConString::print()
-{
-	string dato = "";
-	NodoString* temp = Primero;
-	while (temp != nullptr) {
-		dato += temp->elemento + " \n";
-		temp = temp->Next;
-	}
-	return dato;
 }
 
 //Insertar un dato 
@@ -36,7 +27,7 @@ string ListaConString::add(string _Elemento)
 	return _Elemento;
 	index++;
 }
-
+//Obtener el elemento
 string ListaConString::pop()
 {
 	string elemento; 
@@ -51,12 +42,4 @@ string ListaConString::pop()
 	return elemento;
 }
 
-string ListaConString::top()
-{
-	string elemento; 
-	if (!this->empty())
-	{
-		elemento = this->Primero->obtenerDato();
-	}
-	return elemento;
-}
+

@@ -7,7 +7,7 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 using namespace std;
-
+//Destructor
 ListaPoligonos::~ListaPoligonos()
 {}
 //CONSTRUCTOR VACIO 
@@ -16,6 +16,7 @@ ListaPoligonos::ListaPoligonos()
 	index = 0;
 	Primero = nullptr;
 }
+//Verificar si esta vacío la lista
 bool ListaPoligonos::empty()
 {
 	return(this->Primero == nullptr);
@@ -32,8 +33,6 @@ int ListaPoligonos::add(int _Elemento)
 	index++;
 }
 
-
-
 int ListaPoligonos::pop()
 {
 	int Elemento;
@@ -48,12 +47,3 @@ int ListaPoligonos::pop()
 	return Elemento;
 }
 
-int ListaPoligonos::top()
-{
-	int Elemento; 
-	if (!this->empty())
-	{
-		Elemento = this->Primero->ObtenerDato();
-	}
-	return Elemento;
-}

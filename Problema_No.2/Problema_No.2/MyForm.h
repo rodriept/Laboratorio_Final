@@ -148,121 +148,106 @@ namespace ProblemaNo2 {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(159, 11);
+			this->label1->Location = System::Drawing::Point(50, 9);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(179, 31);
+			this->label1->Size = System::Drawing::Size(359, 27);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Problema No.2";
+			this->label1->Text = L"Problema No.2 Figuras geométricas";
 			// 
 			// LBParaID
 			// 
 			this->LBParaID->FormattingEnabled = true;
-			this->LBParaID->ItemHeight = 16;
-			this->LBParaID->Location = System::Drawing::Point(16, 219);
-			this->LBParaID->Margin = System::Windows::Forms::Padding(4);
+			this->LBParaID->Location = System::Drawing::Point(25, 178);
 			this->LBParaID->Name = L"LBParaID";
-			this->LBParaID->Size = System::Drawing::Size(89, 260);
+			this->LBParaID->Size = System::Drawing::Size(68, 212);
 			this->LBParaID->TabIndex = 1;
 			// 
 			// LBTipo
 			// 
 			this->LBTipo->FormattingEnabled = true;
-			this->LBTipo->ItemHeight = 16;
-			this->LBTipo->Location = System::Drawing::Point(115, 219);
-			this->LBTipo->Margin = System::Windows::Forms::Padding(4);
+			this->LBTipo->Location = System::Drawing::Point(99, 178);
 			this->LBTipo->Name = L"LBTipo";
-			this->LBTipo->Size = System::Drawing::Size(76, 260);
+			this->LBTipo->Size = System::Drawing::Size(72, 212);
 			this->LBTipo->TabIndex = 2;
 			// 
 			// LBArea
 			// 
 			this->LBArea->FormattingEnabled = true;
-			this->LBArea->ItemHeight = 16;
-			this->LBArea->Location = System::Drawing::Point(299, 219);
-			this->LBArea->Margin = System::Windows::Forms::Padding(4);
+			this->LBArea->Location = System::Drawing::Point(268, 178);
 			this->LBArea->Name = L"LBArea";
-			this->LBArea->Size = System::Drawing::Size(89, 260);
+			this->LBArea->Size = System::Drawing::Size(77, 212);
 			this->LBArea->TabIndex = 3;
 			// 
 			// LBPerimetro
 			// 
 			this->LBPerimetro->FormattingEnabled = true;
-			this->LBPerimetro->ItemHeight = 16;
-			this->LBPerimetro->Location = System::Drawing::Point(200, 219);
-			this->LBPerimetro->Margin = System::Windows::Forms::Padding(4);
+			this->LBPerimetro->Location = System::Drawing::Point(177, 178);
 			this->LBPerimetro->Name = L"LBPerimetro";
-			this->LBPerimetro->Size = System::Drawing::Size(89, 260);
+			this->LBPerimetro->Size = System::Drawing::Size(85, 212);
 			this->LBPerimetro->TabIndex = 4;
 			// 
 			// LBColor
 			// 
 			this->LBColor->FormattingEnabled = true;
-			this->LBColor->ItemHeight = 16;
-			this->LBColor->Location = System::Drawing::Point(397, 219);
-			this->LBColor->Margin = System::Windows::Forms::Padding(4);
+			this->LBColor->Location = System::Drawing::Point(351, 178);
 			this->LBColor->Name = L"LBColor";
-			this->LBColor->Size = System::Drawing::Size(89, 260);
+			this->LBColor->Size = System::Drawing::Size(78, 212);
 			this->LBColor->TabIndex = 5;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(16, 199);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(25, 162);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(23, 16);
+			this->label2->Size = System::Drawing::Size(21, 13);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"ID:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(111, 199);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(96, 162);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(38, 16);
+			this->label3->Size = System::Drawing::Size(31, 13);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"Tipo:";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(196, 199);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(174, 162);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(68, 16);
+			this->label4->Size = System::Drawing::Size(56, 13);
 			this->label4->TabIndex = 8;
 			this->label4->Text = L"Perímetro:";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(295, 199);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(265, 162);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(39, 16);
+			this->label5->Size = System::Drawing::Size(32, 13);
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"Area:";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(393, 199);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(348, 162);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(42, 16);
+			this->label6->Size = System::Drawing::Size(34, 13);
 			this->label6->TabIndex = 10;
 			this->label6->Text = L"Color:";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(16, 66);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Location = System::Drawing::Point(12, 54);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(92, 16);
+			this->label7->Size = System::Drawing::Size(74, 13);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"Ingresar figura";
 			// 
@@ -270,20 +255,18 @@ namespace ProblemaNo2 {
 			// 
 			this->CBSeleccionarFigura->FormattingEnabled = true;
 			this->CBSeleccionarFigura->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Triangulo", L"Rectangulo", L"Cuadrado" });
-			this->CBSeleccionarFigura->Location = System::Drawing::Point(20, 86);
-			this->CBSeleccionarFigura->Margin = System::Windows::Forms::Padding(4);
+			this->CBSeleccionarFigura->Location = System::Drawing::Point(15, 70);
 			this->CBSeleccionarFigura->Name = L"CBSeleccionarFigura";
-			this->CBSeleccionarFigura->Size = System::Drawing::Size(160, 24);
+			this->CBSeleccionarFigura->Size = System::Drawing::Size(121, 21);
 			this->CBSeleccionarFigura->TabIndex = 12;
 			this->CBSeleccionarFigura->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox1_SelectedIndexChanged);
 			// 
 			// LAncho
 			// 
 			this->LAncho->AutoSize = true;
-			this->LAncho->Location = System::Drawing::Point(220, 66);
-			this->LAncho->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->LAncho->Location = System::Drawing::Point(165, 54);
 			this->LAncho->Name = L"LAncho";
-			this->LAncho->Size = System::Drawing::Size(45, 16);
+			this->LAncho->Size = System::Drawing::Size(38, 13);
 			this->LAncho->TabIndex = 13;
 			this->LAncho->Text = L"Ancho";
 			this->LAncho->Visible = false;
@@ -291,39 +274,35 @@ namespace ProblemaNo2 {
 			// LBLargo
 			// 
 			this->LBLargo->AutoSize = true;
-			this->LBLargo->Location = System::Drawing::Point(292, 66);
-			this->LBLargo->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->LBLargo->Location = System::Drawing::Point(219, 54);
 			this->LBLargo->Name = L"LBLargo";
-			this->LBLargo->Size = System::Drawing::Size(42, 16);
+			this->LBLargo->Size = System::Drawing::Size(34, 13);
 			this->LBLargo->TabIndex = 14;
 			this->LBLargo->Text = L"Largo";
 			this->LBLargo->Visible = false;
 			// 
 			// TBAnchoRec
 			// 
-			this->TBAnchoRec->Location = System::Drawing::Point(224, 87);
-			this->TBAnchoRec->Margin = System::Windows::Forms::Padding(4);
+			this->TBAnchoRec->Location = System::Drawing::Point(168, 71);
 			this->TBAnchoRec->Name = L"TBAnchoRec";
-			this->TBAnchoRec->Size = System::Drawing::Size(45, 22);
+			this->TBAnchoRec->Size = System::Drawing::Size(35, 20);
 			this->TBAnchoRec->TabIndex = 15;
 			this->TBAnchoRec->Visible = false;
 			// 
 			// TBLargoRec
 			// 
-			this->TBLargoRec->Location = System::Drawing::Point(291, 87);
-			this->TBLargoRec->Margin = System::Windows::Forms::Padding(4);
+			this->TBLargoRec->Location = System::Drawing::Point(218, 71);
 			this->TBLargoRec->Name = L"TBLargoRec";
-			this->TBLargoRec->Size = System::Drawing::Size(45, 22);
+			this->TBLargoRec->Size = System::Drawing::Size(35, 20);
 			this->TBLargoRec->TabIndex = 16;
 			this->TBLargoRec->Visible = false;
 			// 
 			// BRectangulo
 			// 
 			this->BRectangulo->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->BRectangulo->Location = System::Drawing::Point(224, 119);
-			this->BRectangulo->Margin = System::Windows::Forms::Padding(4);
+			this->BRectangulo->Location = System::Drawing::Point(168, 97);
 			this->BRectangulo->Name = L"BRectangulo";
-			this->BRectangulo->Size = System::Drawing::Size(113, 44);
+			this->BRectangulo->Size = System::Drawing::Size(85, 36);
 			this->BRectangulo->TabIndex = 17;
 			this->BRectangulo->Text = L"Ingresar Rectangulo";
 			this->BRectangulo->UseVisualStyleBackColor = true;
@@ -333,10 +312,9 @@ namespace ProblemaNo2 {
 			// LAltura
 			// 
 			this->LAltura->AutoSize = true;
-			this->LAltura->Location = System::Drawing::Point(361, 66);
-			this->LAltura->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->LAltura->Location = System::Drawing::Point(271, 54);
 			this->LAltura->Name = L"LAltura";
-			this->LAltura->Size = System::Drawing::Size(41, 16);
+			this->LAltura->Size = System::Drawing::Size(34, 13);
 			this->LAltura->TabIndex = 18;
 			this->LAltura->Text = L"Altura";
 			this->LAltura->Visible = false;
@@ -344,39 +322,35 @@ namespace ProblemaNo2 {
 			// LBase
 			// 
 			this->LBase->AutoSize = true;
-			this->LBase->Location = System::Drawing::Point(409, 66);
-			this->LBase->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->LBase->Location = System::Drawing::Point(307, 54);
 			this->LBase->Name = L"LBase";
-			this->LBase->Size = System::Drawing::Size(39, 16);
+			this->LBase->Size = System::Drawing::Size(31, 13);
 			this->LBase->TabIndex = 19;
 			this->LBase->Text = L"Base";
 			this->LBase->Visible = false;
 			// 
 			// TBAlturaTria
 			// 
-			this->TBAlturaTria->Location = System::Drawing::Point(360, 87);
-			this->TBAlturaTria->Margin = System::Windows::Forms::Padding(4);
+			this->TBAlturaTria->Location = System::Drawing::Point(270, 71);
 			this->TBAlturaTria->Name = L"TBAlturaTria";
-			this->TBAlturaTria->Size = System::Drawing::Size(45, 22);
+			this->TBAlturaTria->Size = System::Drawing::Size(35, 20);
 			this->TBAlturaTria->TabIndex = 20;
 			this->TBAlturaTria->Visible = false;
 			// 
 			// TBBaseTria
 			// 
-			this->TBBaseTria->Location = System::Drawing::Point(413, 87);
-			this->TBBaseTria->Margin = System::Windows::Forms::Padding(4);
+			this->TBBaseTria->Location = System::Drawing::Point(310, 71);
 			this->TBBaseTria->Name = L"TBBaseTria";
-			this->TBBaseTria->Size = System::Drawing::Size(45, 22);
+			this->TBBaseTria->Size = System::Drawing::Size(35, 20);
 			this->TBBaseTria->TabIndex = 21;
 			this->TBBaseTria->Visible = false;
 			// 
 			// BTriangulo
 			// 
 			this->BTriangulo->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->BTriangulo->Location = System::Drawing::Point(360, 119);
-			this->BTriangulo->Margin = System::Windows::Forms::Padding(4);
+			this->BTriangulo->Location = System::Drawing::Point(270, 97);
 			this->BTriangulo->Name = L"BTriangulo";
-			this->BTriangulo->Size = System::Drawing::Size(100, 44);
+			this->BTriangulo->Size = System::Drawing::Size(75, 36);
 			this->BTriangulo->TabIndex = 22;
 			this->BTriangulo->Text = L"Ingresar Triangulo";
 			this->BTriangulo->UseVisualStyleBackColor = true;
@@ -386,30 +360,27 @@ namespace ProblemaNo2 {
 			// LBLado
 			// 
 			this->LBLado->AutoSize = true;
-			this->LBLado->Location = System::Drawing::Point(489, 66);
-			this->LBLado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->LBLado->Location = System::Drawing::Point(367, 54);
 			this->LBLado->Name = L"LBLado";
-			this->LBLado->Size = System::Drawing::Size(38, 16);
+			this->LBLado->Size = System::Drawing::Size(31, 13);
 			this->LBLado->TabIndex = 23;
 			this->LBLado->Text = L"Lado";
 			this->LBLado->Visible = false;
 			// 
 			// TBLadoCuadrado
 			// 
-			this->TBLadoCuadrado->Location = System::Drawing::Point(484, 87);
-			this->TBLadoCuadrado->Margin = System::Windows::Forms::Padding(4);
+			this->TBLadoCuadrado->Location = System::Drawing::Point(363, 71);
 			this->TBLadoCuadrado->Name = L"TBLadoCuadrado";
-			this->TBLadoCuadrado->Size = System::Drawing::Size(45, 22);
+			this->TBLadoCuadrado->Size = System::Drawing::Size(35, 20);
 			this->TBLadoCuadrado->TabIndex = 24;
 			this->TBLadoCuadrado->Visible = false;
 			// 
 			// BCuadrado
 			// 
 			this->BCuadrado->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->BCuadrado->Location = System::Drawing::Point(468, 119);
-			this->BCuadrado->Margin = System::Windows::Forms::Padding(4);
+			this->BCuadrado->Location = System::Drawing::Point(351, 97);
 			this->BCuadrado->Name = L"BCuadrado";
-			this->BCuadrado->Size = System::Drawing::Size(97, 44);
+			this->BCuadrado->Size = System::Drawing::Size(73, 36);
 			this->BCuadrado->TabIndex = 25;
 			this->BCuadrado->Text = L"Ingresar Cuadrado";
 			this->BCuadrado->UseVisualStyleBackColor = true;
@@ -420,9 +391,10 @@ namespace ProblemaNo2 {
 			// 
 			this->BMostrarFiguras->Enabled = false;
 			this->BMostrarFiguras->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->BMostrarFiguras->Location = System::Drawing::Point(20, 486);
+			this->BMostrarFiguras->Location = System::Drawing::Point(25, 395);
+			this->BMostrarFiguras->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->BMostrarFiguras->Name = L"BMostrarFiguras";
-			this->BMostrarFiguras->Size = System::Drawing::Size(112, 26);
+			this->BMostrarFiguras->Size = System::Drawing::Size(108, 21);
 			this->BMostrarFiguras->TabIndex = 26;
 			this->BMostrarFiguras->Text = L"Mostrar Figuras";
 			this->BMostrarFiguras->UseVisualStyleBackColor = true;
@@ -430,9 +402,9 @@ namespace ProblemaNo2 {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(615, 569);
+			this->ClientSize = System::Drawing::Size(461, 462);
 			this->Controls->Add(this->BMostrarFiguras);
 			this->Controls->Add(this->BCuadrado);
 			this->Controls->Add(this->TBLadoCuadrado);
@@ -460,7 +432,7 @@ namespace ProblemaNo2 {
 			this->Controls->Add(this->LBTipo);
 			this->Controls->Add(this->LBParaID);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyForm";
 			this->Text = L"Ejercicio No.2";
 			this->ResumeLayout(false);
@@ -527,7 +499,7 @@ namespace ProblemaNo2 {
 		default:
 			break;
 		}
-	}
+	}//dependiendo de que seleccione en el ComboBox se mostrar donde puede ingresar los datos
 
     private: System::Void BRectangulo_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -546,13 +518,14 @@ namespace ProblemaNo2 {
 		}
 		else
 		{
+			//Calculo del área y perimetro de la figura y su ID
 			Rectangulo rectangulo(Ancho, Largo);
 			Perimetro = rectangulo.perimetro();
 			Area = rectangulo.area();
 			Id++;
 			rectangulo.SetId(Id);
 			
-
+			//Agregar los datos a las listas correspondientes
 			GuardarAreas->add(Area);
 			GuardarPerimetro->add(Perimetro);
 			GuardarId->add(rectangulo.GetId());
@@ -575,6 +548,7 @@ namespace ProblemaNo2 {
 		}
 		else
 		{
+			//Calculo del área y perimetro de la figura y su ID
 			Triangulo triangulo(Altura,Base);
 			triangulo.SetArista(Altura);
 			triangulo.Setarista2(Base);
@@ -583,7 +557,7 @@ namespace ProblemaNo2 {
 			Area = triangulo.ObtenerArea();
 			Id++;
 			triangulo.SetId(Id);
-
+			//Agregar los datos a las listas correspondientes
 			GuardarAreas->add(Area);
 			GuardarPerimetro->add(Perimetro);
 			GuardarId->add(triangulo.GetId());
@@ -605,13 +579,14 @@ namespace ProblemaNo2 {
 		}
 		else
 		{
+			//Calculo del área y perimetro de la figura y su ID
 			Cuadrado cuadrado(Lado, Lado);
 			Perimetro = cuadrado.perimetro();
 			Area = cuadrado.area();
 			Id++;
 			cuadrado.SetId(Id);
 			
-
+			//Agregar los datos a las listas correspondientes
 			GuardarAreas->add(Area);
 			GuardarPerimetro->add(Perimetro);
 			GuardarId->add(cuadrado.GetId());
@@ -626,6 +601,7 @@ namespace ProblemaNo2 {
     {
 		while (!GuardarPerimetro->empty() && !GuardarAreas->empty() && !GuardarId->empty())
 		{
+			//Llenar los list box que tiene datos enteros llamando cada uno su respectiva lista
 			LBArea->Items->Add(GuardarAreas->pop());
 			LBPerimetro->Items->Add(GuardarPerimetro->pop());
 			LBParaID->Items->Add(GuardarId->pop());
@@ -636,6 +612,7 @@ namespace ProblemaNo2 {
 		String^ ImprimirTipos;
 		while (!GuardarColor->empty() && !GuardarFigura->empty())
 		{
+			//Llenar los list box que tiene datos tipo string llamando cada uno a su respectiva lista
 			colores = GuardarColor->pop();
 			Tipos = GuardarFigura->pop();
 
@@ -643,7 +620,7 @@ namespace ProblemaNo2 {
 			ImprimirTipos = gcnew String(Tipos.c_str());
 			LBColor->Items->Add(ImprimirColores);
 			LBTipo->Items->Add(ImprimirTipos);
-
+			this->Refresh();
 		}
     }
 };
